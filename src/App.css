@@ -65,6 +65,11 @@
   top: -120px;
   z-index: 10;
 }
+p{
+  font-weight: 400;
+  color: var(--gray);
+}
+
 #borderRight{
   border-right: 1px solid gray;
 }
