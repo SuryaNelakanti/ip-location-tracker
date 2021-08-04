@@ -1,38 +1,87 @@
-.App {
+:root{
+  --darkgray: hsl(0, 0%, 17%);
+  --gray: hsl(0, 0%, 59%);
+  --rubikfont: 'Rubik', sans-serif;
+}
+#heroSection{
+  background-image: url('./images/pattern-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 400px;
+  position: relative;
+  top: -20px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+}
+#heroHeader{
+  font-family: var(--rubikfont);
+  font-size: 40px;
+  margin-top: 80px;
+  color:  white;
+}
+#textType{
+  padding: 21px;
+  width: 400px;
+  border-radius: 10px 0 0 10px;
+  color: var(--darkgray);
+  border: transparent;
+  font-family: var(--rubikfont);
+  font-size: 16px;
+}
+#submitButton{
+  width: 60px;
+  height: 63px;
+  border-radius: 0 10px 10px 0;
+  border: 1px transparent;
+  background-image: url("./images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  background-color: black;
+  color: transparent;
+  cursor: pointer;
+}
+#submitButton:hover{
+  transition: 0.3s;
+  background-color: var(--darkgray);
 }
 
-.App-link {
-  color: #61dafb;
+#boxResults{
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 2px 0px white;
+  top: -120px;
+  z-index: 10;
+}
+#borderRight{
+  border-right: 1px solid gray;
+}
+.resultBox{
+  width: 200px;
+  height: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#map{
+  position: relative;
+  top: -240px;
+  z-index: 0;
 }
+
+img.leaflet-marker-icon
+{
+    background-image: url("./images/icon-location.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
