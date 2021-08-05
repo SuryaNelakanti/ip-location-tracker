@@ -29,7 +29,7 @@
   color: var(--darkgray);
   border: transparent;
   font-family: var(--rubikfont);
-  font-size: 16px;
+  font-size: 18px;
 }
 #submitButton{
   width: 60px;
@@ -90,3 +90,27 @@ img.leaflet-marker-icon
     background-size: contain;
     background-repeat: no-repeat;
 } 
+@media (max-width: 1300px) {
+  *{
+    font-size: 16px;
+    transition: 0.2s;
+  }
+  #boxResults{
+    width: 90%;
+  }
+}
+@media (max-width: 700px) {
+  #textType{
+    width: 250px;
+  }
+  #boxResults{
+    height: 400px;
+    flex-direction: column;
+  }
+  #borderRight{
+    border-right: 1px transparent;
+  }
+  #map{
+    top: -440px
+  }
+}
